@@ -1,0 +1,50 @@
+@import url("./reset.css");
+@import url("./variables.css");
+@import url("./landmarks.css");
+@import url("./utilities.css");
+@import url("./components.css");
+
+:root {
+  /* Default Fallbacks */
+  --outline-color: transparent;
+  --header-height: 3.5rem;
+
+  /* Theme */
+  --body-color-text: var(--component-body-color-text, #fff);
+  --body-color-bg: var(--component-body-color-bg, #000);
+
+  --body-font-size: var(--component-body-font-size, 1rem);
+  --body-font-weight: var(--component-body-font-weight, 400);
+  --body-font-height: var(--component-body-font-height, 1.5);
+  --body-font-family: var(--component-body-font-family, system-ui, sans-serif);
+}
+
+/* ----------------------------------------------------------------- */
+/* Screen Reader Only                                                */
+/* ----------------------------------------------------------------- */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.skip-navigation-link {
+  position: absolute;
+  inset: auto auto auto 1rem;
+  transform: translate(0, -120%);
+  z-index: 1000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: var(--component-skip-nav-color-text, #ccc);
+  background-color: var(--component-skip-nav-color-bg, #333);
+  transition: var(--component-skip-nav-transition, all 0.3s ease-in-out);
+}
+.skip-navigation-link:focus {
+  transform: translate(0);
+  text-decoration: underline;
+}

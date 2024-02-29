@@ -1,0 +1,19 @@
+{% for field in form %}
+
+<div>
+  {{ field.errors }}
+
+  <label class="form-label" for="{{ field.id_for_label }}">
+    {{ field.label }}
+  </label>
+
+  <input
+    id="{{ field.id_for_label }}"
+    name="{{ field.html_name }}"
+    value="{{ field.value }}"
+    class="form-input"
+    type="number"
+  />
+</div>
+
+{% endfor %}

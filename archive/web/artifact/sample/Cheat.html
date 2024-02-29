@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html style="font-size: 16px;font-family: Roboto, Arial, sans-serif;" lang="en" dark="" system-icons="" typography="" typography-spacing="">
+    <head>
+        <title>Number Generator</title>
+        <meta>  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            :root{
+                --header-color: rgb(1, 1, 50);
+                --body-color: #000000;
+                --footer-color: rgb(30, 30, 30);
+
+                --primary-text-color: var(--light-theme-text-color);
+                --primary-background-color: var(--light-theme-background-color);
+                --secondary-text-color: var(--light-theme-secondary-color);
+                --disabled-text-color: var(--light-theme-disabled-color);
+                --divider-color: var(--light-theme-divider-color);
+                --error-color: #dd2c00;
+                --primary-color: #3f51b5;
+                --light-primary-color: #c5cae9;
+                --dark-primary-color: #303f9f;
+                --accent-color: #ff4081;
+                --light-accent-color: #ff80ab;
+                --dark-accent-color: #f50057;
+                --light-theme-background-color: #fff;
+                --light-theme-base-color: #000;
+                --light-theme-text-color: #212121;
+                --light-theme-secondary-color: #737373;
+                --light-theme-disabled-color: #9b9b9b;
+                --light-theme-divider-color: #dbdbdb;
+                --dark-theme-background-color: #212121;
+                --dark-theme-base-color: #fff;
+                --dark-theme-text-color: #fff;
+                --dark-theme-secondary-color: #bcbcbc;
+                --dark-theme-disabled-color: #646464;
+                --dark-theme-divider-color: #3c3c3c;
+                --text-primary-color: var(--dark-theme-text-color);
+                --default-primary-color: var(--primary-color);
+            }
+            body{
+                background-color: var(--body-color) ;
+                color: rgb(255, 255, 255);
+            }
+            input{
+                margin: 5px 5px 5px 5px;
+            }
+            .title{
+                text-align: center;
+                color: white; 
+                background-color: var(--header-color, black);
+                margin: 0px 0px 0px 0px;
+                padding: 15px 0px 15px 0px;
+            }
+            .pages{
+                text-align: center;
+                color: grey;
+                background-color:var(--header-color, black);
+                margin: 0px 0px 20px 0px;
+                padding: 10px 0px 20px 0px;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                align-items: center;
+                justify-items: center;
+            }
+            .intake-fields {
+                text-align: left;
+                padding: 40px 30px 10px 30px;
+            }
+            .footer{
+                text-align: center;
+                background-color:var(--footer-color);
+                display:grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 10px 0px 10px 0px;
+            }
+            .container{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 1fr;
+                align-items: center;
+                justify-items: center;
+            }
+            .base-intake{
+                display: grid;
+                grid-template-columns: 1fr ;
+                grid-template-rows: repeat(2, 1fr);
+            }
+            .biassed-intake{
+                display: grid;
+                grid-template-columns: 1fr ;
+                grid-template-rows: 1fr 2fr;    
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2 class="title">Project Mercury</h2>
+            <nav >
+                <ul class="pages">
+                    <li>Random Roll</li>
+                    <li>Generate Numbers</li>
+                    <li>Graphs & Statistics</li>
+                    <li>Past Result Data</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!--Display Results-->
+            <textarea rows="10" cols="100"></textarea>
+
+            <form class="intake-fields container">
+             <div class="base-intake"> 
+                    <div>
+                        <span>Number of Dices :</span>
+                        <input type="text" value="7"/>
+                    </div>
+                    <div>
+                        <span>Number of Sides :</span>
+                        <input type="text" value="50"/>
+                    </div>
+                    <br>
+                    <input name="Roll" type="Submit">
+             </div>
+             <div class="biassed-intake">
+                    <div>
+                        <span>Trust?</span>
+                        <label></label><input name="Trust?" type="radio"/>No</label>
+                        <label><input name="Trust?" type="radio"/>Yes</label>
+                    </div>
+                    <div>
+                        <span>Number of rolls :</span>
+                        <input type="text" value="1">
+                    </div>
+             </div>
+            </form>
+        </main>
+        <footer class="footer">            
+            <a href="https://loteries.espacejeux.com/en/lotteries/lotto-max" target="_blank">Lotto-Max Results</a>
+            <a href="#">Google Sheets</a>
+        </footer>
+    </body>
+</html>

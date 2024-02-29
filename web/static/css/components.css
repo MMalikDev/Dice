@@ -1,0 +1,107 @@
+/* ----------------------------------------------------------------- */
+/* Sections                                                          */
+/* ----------------------------------------------------------------- */
+.header {
+  line-height: 3.5rem;
+  font-size: clamp(2rem, calc(1em + 1.5vw), 3rem);
+}
+
+.main-content {
+  gap: 4rem;
+  display: flex;
+  margin: 2rem auto;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* ----------------------------------------------------------------- */
+/* Display                                                           */
+/* ----------------------------------------------------------------- */
+.display-list {
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  align-items: center;
+  width: min(80%, 80rem);
+  border-radius: 0.75rem;
+  font-family: monospace;
+  justify-content: center;
+  background-color: var(--component-display-list-color-bg);
+}
+
+.display-item {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  background-color: var(--component-display-item-color-bg);
+}
+
+/* ----------------------------------------------------------------- */
+/* Form                                                              */
+/* ----------------------------------------------------------------- */
+.form-wrapper {
+  margin: auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: fit-content;
+  background-color: var(--component-form-wrapper-color-bg);
+  box-shadow: var(--shadow-lg-primary), var(--shadow-lg-secondary);
+}
+
+.form-groups {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto auto 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin: auto auto 0.5rem;
+}
+
+.form-input {
+  padding: 0.5rem;
+  line-height: 1.25;
+  text-align: center;
+  border-radius: 0.25rem;
+  box-shadow: var(--shadow);
+  color: var(--component-input-color-text);
+  border: 1px solid var(--component-input-color-border);
+}
+
+/* ----------------------------------------------------------------- */
+/* Button                                                            */
+/* ----------------------------------------------------------------- */
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-submit {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+
+  color: var(--reference-color-light);
+  background-color: var(--component-submit-color-bg);
+}
+.button-submit:hover,
+.button-submit:focus {
+  background-color: var(--component-submit-hover-color-bg);
+}
+
+/* ----------------------------------------------------------------- */
+/* Media Queries                                                     */
+/* ----------------------------------------------------------------- */
+@media only screen and (min-width: 600px) {
+  .display-list {
+    min-height: 40dvh;
+  }
+  .form-groups {
+    flex-direction: row;
+  }
+}

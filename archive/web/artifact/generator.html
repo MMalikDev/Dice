@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html style="font-size: 16px; font-family: Roboto, Arial, sans-serif" lang="en">
+  <head>
+    <title>Number Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body id="body-generator">
+    <header>
+      <h2 class="title">Project Mercury</h2>
+      <nav class="navigation">
+        <a href="./index.html">Random Roll</a>
+        <a href="./generator.html">Generate Numbers</a>
+        <a href="./analysis.html">Graphs & Statistics</a>
+        <a href="./data.html">Past Result Data</a>
+      </nav>
+    </header>
+    <!--Figure out a way to dislay python return values here-->
+    <textarea id="display"></textarea>
+
+    <!--Figure out a way to dislay python return and input values here-->
+    <textarea id="value-selection"></textarea>
+
+    <form id="input-fields">
+      <div id="base-fields">
+        <div id="dice_Qty">
+          <span>Number of Dices :</span>
+          <input type="text" value="7" />
+        </div>
+        <div id="side_Qty">
+          <span>Number of Sides :</span>
+          <input type="text" value="50" />
+        </div>
+      </div>
+      <div id="optional-fields">
+        <div id="Trust">
+          <span>Trust?</span>
+          <label>input name="Trust?" type="radio"/>No</label>
+          <label><input name="Trust?" type="radio" />Yes</label>
+        </div>
+        <div id="Repeat">
+          <span>Number of rolls :</span>
+          <input type="text" value="1" />
+        </div>
+      </div>
+      <div id="generator-button">
+        <input name="Roll" type="Submit" />
+      </div>
+    </form>
+
+    <footer class="footer">
+      <a
+        href="https://loteries.espacejeux.com/en/lotteries/lotto-max"
+        target="_blank"
+        >Lotto-Max Results</a
+      >
+      <a href="#" target="_blank">Google Sheets</a>
+    </footer>
+  </body>
+</html>

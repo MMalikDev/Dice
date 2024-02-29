@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Dice Roller</title>
+  </head>
+  <body>
+    <h1>Dice Roller</h1>
+
+    <form>
+      Number of dice: <input type="text" id="num_dice" /><br />
+      Number of sides: <input type="text" id="num_sides" /><br />
+      <button type="button" onclick="rollDice()">Roll Dice</button>
+    </form>
+
+    <br />
+
+    <div id="results"></div>
+
+    <script>
+      function rollDice() {
+        // Get the number of dice and sides from the form
+        var numDice = document.getElementById("num_dice").value;
+        var numSides = document.getElementById("num_sides").value;
+
+        // Make sure that the same number isn't selected twice
+        if (numDice > numSides) {
+          alert(
+            "Error: the number of dice must be less than or equal to the number of sides."
+          );
+        } else {
+          // Create a list of possible rolls
+          var rolls = [];
+          for (var i = 1; i <= numSides; i++) {
+            rolls.push(i);
+          }
+
+          // Shuffle the list
+          for (var i = numSides - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = rolls[i];
+            rolls[i] = rolls[j];
+            rolls[j] = temp;
+          }
+
+          // Take the first num_dice elements of the shuffled list
+          rolls = rolls.slice(0, numDice);
+
+          // Sort the rolls
+          rolls.sort();
+
+          // Display the rolls
+          var resultsDiv = document.getElementById("results");
+          resultsDiv.innerHTML = "Rolls: " + rolls.join(", ");
+        }
+      }
+    </script>
+  </body>
+</html>

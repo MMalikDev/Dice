@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Dice Roll</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="skip-navigation-link" href="#main-content">Skip Navigation</a>
+      <div class="nav-container">
+        <div class="logo-wrap">
+          <a href="./index.html" class="logo">Project Mercury</a>
+        </div>
+        <nav class="site-nav">
+          <button
+            class="menu-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          >
+            <span class="visually-hidden">Menu</span>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </button>
+          <ul
+            id="primary-navigation"
+            class="primary-navigation"
+            data-state="closed"
+          >
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Random Roll</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="components/generator.html"
+                >Generate Numbers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="components/analysis.html"
+                >Graphs & Statistics</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="components/data.html"
+                >Past Result Data</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <textarea id="display" rows="10" cols="100"></textarea>
+
+        <form id="input-fields">
+          <div id="base-fields">
+            <div id="dice-qty" class="form-group">
+              <label for="dice_qty">Number of Dice:</label>
+              <input type="text" id="dice_qty" placeholder="7" />
+            </div>
+            <div id="side-qty" class="form-group">
+              <label for="side_qty">Number of Sides:</label>
+              <input type="text" id="side_qty" placeholder="50" />
+            </div>
+          </div>
+          <div id="optional-fields">
+            <div id="trust" class="form-group">
+              <label class="radio-label">Trust?</label>
+              <div class="radio-inputs">
+                <div class="option-wrap">
+                  <input
+                    id="trust_no"
+                    name="Trust?"
+                    type="radio"
+                    value="no"
+                    aria-label="No"
+                  />
+                  <label class="trust-label" for="trust_no">No</label>
+                </div>
+                <div class="option-wrap">
+                  <input
+                    id="trust_yes"
+                    name="Trust?"
+                    type="radio"
+                    value="yes"
+                    aria-label="Yes"
+                  />
+                  <label class="trust-label" for="trust_yes">Yes</label>
+                </div>
+              </div>
+            </div>
+            <div id="roll-qty" class="form-group">
+              <label for="num_rolls">Number of Rolls:</label>
+              <input type="text" id="num_rolls" placeholder="1" />
+            </div>
+          </div>
+          <div class="button-wrap">
+            <button id="generator-button" class="btn-submit" type="submit">
+              Roll
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <small class="copyrights">
+          &copy <span id="currentYear"></span>. All Rights Reserved
+        </small>
+        <small>
+          <a
+            href="https://loteries.espacejeux.com/en/lotteries/lotto-max"
+            target="_blank"
+            >Lotto-Max Results</a
+          >
+        </small>
+        <small>
+          <a href="#" target="_blank">Google Sheets</a>
+        </small>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

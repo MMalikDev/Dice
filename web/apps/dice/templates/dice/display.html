@@ -1,0 +1,11 @@
+<ul class="display-list">
+  {% if result %} {% for number in result %}
+
+  <li class="display-item">{{ number }}</li>
+
+  {% endfor %} {% else %} {% for number in '1234567' %}
+
+  <li class="display-item">&nbsp;&nbsp;</li>
+
+  {% endfor %} {% endif %}
+</ul>

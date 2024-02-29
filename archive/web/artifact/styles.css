@@ -1,0 +1,148 @@
+:root {
+  --header-color: rgb(1, 1, 50);
+  --main-background-color: #000;
+  --main-font-color: #fff;
+  --footer-color: rgb(30, 30, 30);
+  --spacing: 1em;
+  --spacing-header: 2em;
+}
+body {
+  background-color: var(--main-background-color);
+  color: var(--main-font-color);
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto repeat(2, 1fr) auto;
+  gap: var(--spacing, 1em);
+  grid-template-areas:
+    "header header header"
+    "display display display"
+    "input input input"
+    "footer footer footer";
+  align-items: center;
+  justify-items: center;
+}
+#body-index {
+  background-color: var(--main-background-color);
+  color: var(--main-font-color);
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto repeat(2, 1fr) auto;
+  gap: var(--spacing, 1em);
+  grid-template-areas:
+    "header header header"
+    "display display display"
+    "input input input"
+    "footer footer footer";
+  align-items: center;
+  justify-items: center;
+}
+#body-generator {
+  background-color: var(--main-background-color);
+  color: var(--main-font-color);
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto repeat(2, 1fr) auto;
+  gap: var(--spacing, 1em);
+  grid-template-areas:
+    "header header header"
+    "display display value-selection"
+    "input input value-selection"
+    "footer footer footer";
+  align-items: center;
+  justify-items: center;
+}
+header {
+  padding: var(--spacing, 1em);
+  background-color: var(--header-color);
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "title"
+    "navigation";
+}
+footer {
+  grid-area: footer;
+  background-color: var(--footer-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  border-radius: 10px;
+}
+#value-selector {
+  grid-area: value-selection;
+  background-color: #f00;
+}
+.navigation {
+  color: var(--main-font-color);
+  grid-area: navigation;
+  display: grid;
+  grid-template-columns: repeat(4, auto-fit);
+  grid-template-rows: 1fr;
+  column-gap: var(--spacing-header);
+  grid-template-areas: "1 2 3 4";
+}
+.navigation a {
+  color: var(--main-font-color);
+  align-self: center;
+  text-decoration: none;
+}
+#display {
+  grid-area: display;
+  background-color: #fff;
+}
+#input-fields {
+  grid-area: input;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: var(--spacing, 1em);
+  grid-template-areas:
+    "base-inputs optional-inputs"
+    "base-inputs optional-inputs"
+    "submit-button submit-button";
+  align-items: center;
+  justify-items: center;
+}
+#base-fields {
+  grid-area: base-inputs;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  row-gap: var(--spacing, 1em);
+  grid-template-areas:
+    "dice_Qty"
+    "side_Qty";
+}
+#dice_Qty {
+  grid-area: dice_Qty;
+}
+#side_Qty {
+  grid-area: side_Qty;
+  align-items: center;
+  justify-items: center;
+}
+#generator-button {
+  grid-area: submit-button;
+}
+#optional-fields {
+  text-align: left;
+  grid-area: optional-inputs;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "Trust"
+    "Repeat"
+    ".";
+}
+#Trust {
+  grid-area: Trust;
+}
+#Repeat {
+  grid-area: Repeat;
+}

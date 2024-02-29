@@ -1,0 +1,9 @@
+<form class="form-wrapper" action="{% url 'dice:roll' %}" method="POST">
+  {% csrf_token %}
+
+  <div class="form-groups">{{ form }}</div>
+
+  <div class="button-wrapper">
+    <button class="button-submit" type="submit">Submit</button>
+  </div>
+</form>

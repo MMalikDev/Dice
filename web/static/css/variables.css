@@ -1,0 +1,197 @@
+/* Tier 1 - Reference */
+:root {
+  --reference-transition: all 0.3s ease-in-out;
+
+  --reference-color-light: #ffffff;
+  --reference-color-neutral-50: #fafafa;
+  --reference-color-neutral-100: #f5f5f5;
+  --reference-color-neutral-200: #e5e5e5;
+  --reference-color-neutral-300: #d4d4d4;
+  --reference-color-neutral-400: #a3a3a3;
+  --reference-color-neutral-500: #737373;
+  --reference-color-neutral-600: #525252;
+  --reference-color-neutral-700: #404040;
+  --reference-color-neutral-800: #262626;
+  --reference-color-neutral-900: #171717;
+  --reference-color-neutral-950: #0a0a0a;
+  --reference-color-dark: #000000;
+
+  --reference-color-primary-50: #ecfeff;
+  --reference-color-primary-100: #cffafe;
+  --reference-color-primary-200: #a5f3fc;
+  --reference-color-primary-300: #67e8f9;
+  --reference-color-primary-400: #22d3ee;
+  --reference-color-primary-500: #06b6d4;
+  --reference-color-primary-600: #0891b2;
+  --reference-color-primary-700: #0e7490;
+  --reference-color-primary-800: #155e75;
+  --reference-color-primary-900: #164e63;
+  --reference-color-primary-950: #083344;
+
+  --reference-color-secondary-50: #f0f9ff;
+  --reference-color-secondary-100: #e0f2fe;
+  --reference-color-secondary-200: #bae6fd;
+  --reference-color-secondary-300: #7dd3fc;
+  --reference-color-secondary-400: #38bdf8;
+  --reference-color-secondary-500: #0ea5e9;
+  --reference-color-secondary-600: #0284c7;
+  --reference-color-secondary-700: #0369a1;
+  --reference-color-secondary-800: #075985;
+  --reference-color-secondary-900: #0c4a6e;
+
+  --reference-color-tertiary-50: #f8fafc;
+  --reference-color-tertiary-100: #f1f5f9;
+  --reference-color-tertiary-200: #e2e8f0;
+  --reference-color-tertiary-300: #cbd5e1;
+  --reference-color-tertiary-400: #94a3b8;
+  --reference-color-tertiary-500: #64748b;
+  --reference-color-tertiary-600: #475569;
+  --reference-color-tertiary-700: #334155;
+  --reference-color-tertiary-800: #1e293b;
+  --reference-color-tertiary-900: #0f172a;
+  --reference-color-tertiary-950: #020617;
+
+  --reference-color-danger-50: #fef2f2;
+  --reference-color-danger-100: #fee2e2;
+  --reference-color-danger-200: #fecaca;
+  --reference-color-danger-300: #fca5a5;
+  --reference-color-danger-400: #f87171;
+  --reference-color-danger-500: #ef4444;
+  --reference-color-danger-600: #dc2626;
+  --reference-color-danger-700: #b91c1c;
+  --reference-color-danger-800: #991b1b;
+  --reference-color-danger-900: #7f1d1d;
+  --reference-color-danger-950: #450a0a;
+
+  --reference-color-info-50: #eff6ff;
+  --reference-color-info-100: #dbeafe;
+  --reference-color-info-200: #bfdbfe;
+  --reference-color-info-300: #93c5fd;
+  --reference-color-info-400: #60a5fa;
+  --reference-color-info-500: #3b82f6;
+  --reference-color-info-600: #2563eb;
+  --reference-color-info-700: #1d4ed8;
+  --reference-color-info-800: #1e40af;
+  --reference-color-info-900: #1e3a8a;
+  --reference-color-info-950: #172554;
+
+  --reference-color-success-50: #f0fdf4;
+  --reference-color-success-100: #dcfce7;
+  --reference-color-success-200: #bbf7d0;
+  --reference-color-success-300: #86efac;
+  --reference-color-success-400: #4ade80;
+  --reference-color-success-500: #22c55e;
+  --reference-color-success-600: #16a34a;
+  --reference-color-success-700: #15803d;
+  --reference-color-success-800: #166534;
+  --reference-color-success-900: #14532d;
+  --reference-color-success-950: #052e16;
+
+  --reference-color-warning-50: #fefce8;
+  --reference-color-warning-100: #fef9c3;
+  --reference-color-warning-200: #fef08a;
+  --reference-color-warning-300: #fde047;
+  --reference-color-warning-400: #facc15;
+  --reference-color-warning-500: #eab308;
+  --reference-color-warning-600: #ca8a04;
+  --reference-color-warning-700: #a16207;
+  --reference-color-warning-800: #854d0e;
+  --reference-color-warning-900: #713f12;
+  --reference-color-warning-950: #422006;
+}
+
+/* Tier 2 - Theme-Reference */
+:root {
+  --theme-default-transition: var(--reference-transition);
+  --theme-default-color-light: var(--reference-color-light);
+  --theme-default-color-neutral-950: var(--reference-color-neutral-950);
+  --theme-default-color-neutral-900: var(--reference-color-neutral-900);
+  --theme-default-color-neutral-800: var(--reference-color-neutral-800);
+  --theme-default-color-neutral-700: var(--reference-color-neutral-700);
+  --theme-default-color-neutral-600: var(--reference-color-neutral-600);
+  --theme-default-color-neutral-500: var(--reference-color-neutral-500);
+  --theme-default-color-neutral-400: var(--reference-color-neutral-400);
+  --theme-default-color-neutral-300: var(--reference-color-neutral-300);
+  --theme-default-color-neutral-200: var(--reference-color-neutral-200);
+  --theme-default-color-neutral-100: var(--reference-color-neutral-100);
+  --theme-default-color-neutral-50: var(--reference-color-neutral-50);
+  --theme-default-color-dark: var(--reference-color-dark);
+}
+
+/* Tier 2 - Theme-Components */
+:root {
+  --theme-default-body-color-bg: var(--theme-default-color-neutral-950);
+  --theme-default-body-color-text: var(--theme-default-color-neutral-100);
+
+  --theme-default-skip-nav-transition: var(--theme-default-transition);
+  --theme-default-skip-nav-color-bg: var(--theme-default-color-neutral-900);
+  --theme-default-skip-nav-color-text: var(--theme-default-color-neutral-300);
+
+  --theme-default-header-color-bg: var(--theme-default-color-neutral-800);
+
+  --theme-default-nav-color-bg: var(--theme-default-color-neutral-900);
+  --theme-default-nav-color-text: var(--theme-default-color-neutral-500);
+  --theme-default-nav-color-border: var(--theme-default-color-neutral-400);
+  --theme-default-nav-color-text-hover: var(--theme-default-color-neutral-600);
+
+  --theme-default-footer-color-bg: var(--theme-default-color-neutral-950);
+
+  /* Custom */
+  --theme-default-display-list-color-bg: var(--theme-default-color-neutral-900);
+  --theme-default-display-item-color-bg: var(--theme-default-color-neutral-800);
+
+  --theme-default-form-wrapper-color-bg: var(--theme-default-color-neutral-800);
+  --theme-default-input-color-border: var(--theme-default-color-neutral-600);
+  --theme-default-input-color-text: var(--theme-default-color-dark);
+
+  --theme-default-submit-color-bg: var(--theme-default-color-dark);
+  --theme-default-submit-hover-color-bg: var(--theme-default-color-neutral-900);
+}
+
+/* Tier 3 - Components */
+:root {
+  /* General */
+  --component-body-color-bg: var(--theme-default-body-color-bg);
+  --component-body-color-text: var(--theme-default-body-color-text);
+
+  --component-skip-nav-color-bg: var(--theme-default-skip-nav-color-bg);
+  --component-skip-nav-color-text: var(--theme-default-skip-nav-color-text);
+  --component-skip-nav-transition: var(--theme-default-skip-nav-transition: );
+
+  --component-header-color-bg: var(--theme-default-header-color-bg);
+
+  --component-nav-color-bg: var(--theme-default-nav-color-bg);
+  --component-nav-color-text: var(--theme-default-nav-color-text);
+  --component-nav-color-border: var(--theme-default-nav-color-border);
+  --component-nav-color-text-hover: var(--theme-default-nav-color-text-hover);
+
+  --component-footer-color-bg: var(--theme-default-footer-color-bg);
+
+  /* Custom */
+  --component-display-list-color-bg: var(--theme-default-display-list-color-bg);
+  --component-display-item-color-bg: var(--theme-default-display-item-color-bg);
+
+  --component-form-wrapper-color-bg: var(--theme-default-form-wrapper-color-bg);
+  --component-input-color-border: var(--theme-default-input-color-border);
+  --component-input-color-text: var(--theme-default-input-color-text);
+
+  --component-submit-color-bg: var(--theme-default-submit-color-bg);
+  --component-submit-hover-color-bg: var(--theme-default-submit-hover-color-bg);
+}
+
+/* Misc. */
+:root {
+  /* Shadow Color*/
+  --shadow-color-primary: 0 4px 6px -1px;
+  --shadow-color-secondary: 0 2px 4px -1px;
+
+  /* Shadow Size*/
+  --shadow: 0 1px 3px 0 var(--shadow-color-primary),
+    0 1px 2px 0 var(--shadow-color-secondary);
+
+  --shadow-lg: 0 4px 6px -1px var(--shadow-color-primary),
+    0 2px 4px -1px var(--shadow-color-secondary);
+
+  /* Javascript Fallback */
+  --header-height: 5rem;
+}

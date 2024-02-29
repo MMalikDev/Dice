@@ -1,0 +1,31 @@
+version: "3.8"
+name: dice
+
+networks:
+  proxy:
+    name: ${NETWORK_NAME}
+    # external: true
+
+services:
+  django:
+    build: $DJANGO_IMAGE
+    image: server_django
+    container_name: django
+    restart: unless-stopped
+
+    environment:
+      ALLOWED_HOSTS: $ALLOWED_HOSTS
+      SECRET_KEY: $SECRET_KEY
+      DEBUG: $DEBUG
+
+      WEB_PORT: $DJANGO_PORT
+
+    ports:
+      - $HOST_DJANGO_PORT:$DJANGO_PORT
+
+    networks:
+      proxy:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.django.rule=Host(`django.localhost`)"
+      - "traefik.http.services.django.loadbalancer.server.port=$DJANGO_PORT"

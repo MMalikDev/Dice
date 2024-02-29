@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html style="font-size: 16px; font-family: Roboto, Arial, sans-serif" lang="en">
+  <head>
+    <title>Dice Roll</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body id="body-index">
+    <header>
+      <h2>Project Mercury</h2>
+      <nav class="navigation">
+        <a href="./index.html">Random Roll</a>
+        <a href="./generator.html">Generate Numbers</a>
+        <a href="./analysis.html">Graphs & Statistics</a>
+        <a href="./data.html">Past Result Data</a>
+      </nav>
+    </header>
+    <!--Figure out a way to dislay pythonm return values here-->
+    <textarea id="display" rows="10" cols="100"></textarea>
+
+    <form id="input-fields">
+      <div id="base-fields">
+        <div id="dice_Qty">
+          <span>Number of Dices :</span>
+          <input type="text" value="7" />
+        </div>
+        <div id="side_Qty">
+          <span>Number of Sides :</span>
+          <input type="text" value="50" />
+        </div>
+      </div>
+      <div id="optional-fields">
+        <div id="Trust">
+          <span>Trust?</span>
+          <label><input name="Trust?" type="radio" />No</label>
+          <label><input name="Trust?" type="radio" />Yes</label>
+        </div>
+        <div id="Repeat">
+          <span>Number of rolls :</span>
+          <input type="text" value="1" />
+        </div>
+      </div>
+      <div id="generator-button">
+        <input name="Roll" type="Submit" />
+      </div>
+    </form>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        let dice_Qty = document.querySelector("#dice_Qty").value;
+        let side_Qty = document.querySelector("#side_Qty").value;
+        let Trust = document.querySelector("#Trust").value;
+        let Repeat = document.querySelector("#Repeat").value;
+
+        alert(
+          "Roll " +
+            dice_Qty +
+            " dices with " +
+            side_Qty +
+            " sides each. Do this " +
+            Repeat +
+            " time(s). BTW Trust is: " +
+            Trust
+        );
+        e.preventDefault();
+      });
+    </script>
+
+    <footer class="footer">
+      <a
+        href="https://loteries.espacejeux.com/en/lotteries/lotto-max"
+        target="_blank"
+        >Lotto-Max Results</a
+      >
+      <a href="#" target="_blank">Google Sheets</a>
+    </footer>
+  </body>
+</html>
