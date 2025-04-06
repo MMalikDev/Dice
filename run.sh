@@ -29,7 +29,7 @@ run_docker(){
 run_python_dev(){
     local msg="Running Python in devcontainer venv"
     printf "\n$icon_start $msg\n\n"
-    source .venv/bin/activate
+    use_venv
     cd src && python3 main.py
     printf "\n\n"
     exit 0
@@ -37,7 +37,7 @@ run_python_dev(){
 run_django_dev(){
     local msg="Running Django in devcontainer venv"
     printf "\n$icon_start $msg\n\n"
-    source .venv/bin/activate
+    use_venv
     cp .env web/config/.env
     cd web && bash docker.sh
     printf "\n\n"
@@ -48,7 +48,7 @@ run_django_dev(){
 run_python(){
     local msg="Running Python in local venv"
     printf "\n$icon_start $msg\n\n"
-    source .venv/Scripts/activate
+    use_venv
     cd src && python main.py $1
     printf "\n\n"
     exit 0
@@ -57,8 +57,8 @@ run_django(){
     local msg="Running Django in local venv"
     printf "\n$icon_start $msg\n\n"
     cp .env web/config/.env
+    use_venv
     cd web
-    source .venv/Scripts/activate
     python manage.py runserver
     printf "\n\n"
     exit 0
@@ -92,7 +92,7 @@ main(){
         esac
     done
     shift $((OPTIND -1))
-
+    
     use_env_file
 }
 

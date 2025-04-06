@@ -131,3 +131,13 @@ start_proxy(){
     docker image prune -f
     cd ..
 }
+
+# Python
+use_venv(){
+    local os=$(uname | tr '[A-Z]' '[a-z]')
+    case ${os} in
+        linux* | darwin*) source .venv/bin/activate ;;
+        mingw* | cygwin*) source .venv/Scripts/activate ;;
+        *) log_error "$icon_start Unsupported operating system: $os" ;;
+    esac
+}
