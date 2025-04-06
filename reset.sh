@@ -10,7 +10,7 @@ declare -a images=(
     server_django
 )
 declare -a volumes=(
-    # dice_databse_data
+    # dice_database_data
 )
 declare -a volumes=(
     web/config/.env
@@ -23,7 +23,7 @@ declare -a volumes=(
 main(){
     # Shut down all containers
     docker compose down
-
+    
     # Stop Reverse Proxy
     # end_proxy
     

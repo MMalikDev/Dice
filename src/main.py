@@ -1,7 +1,7 @@
 from typing import List
 
 from lib import analysis, dice, output
-from lib.utilities import load_variable, logger
+from lib.utilities import debug, load_variable, logger
 
 
 # ---------------------------------------------------------------------- #
@@ -39,6 +39,7 @@ def get_odds(dies: int, sides: int) -> int:
 # ---------------------------------------------------------------------- #
 # Main Functions                                                         #
 # ---------------------------------------------------------------------- #
+@debug
 def main(dies: int, sides: int, random: int, tampered: int, X: bool) -> None:
     FILEPATH, NUMS = "./data/", 20
 

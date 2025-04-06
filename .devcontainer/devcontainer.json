@@ -19,11 +19,14 @@
     }
   },
 
-  "postCreateCommand": "bash setup.sh",
-  "forwardPorts": [8000],
+  "postCreateCommand": "bash setup.sh new",
+  "forwardPorts": [80, 8000],
   "portsAttributes": {
-    "8000": {
+    "80": {
       "label": "Website"
+    },
+    "8000": {
+      "label": "Dev Website"
     }
   },
 
@@ -69,9 +72,9 @@
         },
 
         // Misc.
-        "jupyter.askForKernelRestart": false,
         "redhat.telemetry.enabled": false
       },
+
       "extensions": [
         // Format
         "ms-python.black-formatter",
@@ -83,16 +86,6 @@
         // Python
         "ms-python.python",
         "ms-python.vscode-pylance",
-
-        // DevTools
-        "ms-kubernetes-tools.vscode-kubernetes-tools",
-        "ms-vscode-remote.remote-containers",
-        "ms-azuretools.vscode-docker",
-
-        // Views
-        "GrapeCity.gc-excelviewer",
-        "qwtel.sqlite-viewer",
-        "mtxr.sqltools",
 
         // Misc.
         "streetsidesoftware.code-spell-checker",
