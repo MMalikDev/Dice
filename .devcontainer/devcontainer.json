@@ -13,16 +13,20 @@
       "moby": "false"
     },
     "ghcr.io/devcontainers/features/python:1": {
-      "installTools": true,
-      "installJupyterlab": true,
+      "installTools": false,
+      "installJupyterlab": false,
       "version": "3.12"
     }
   },
 
-  "postCreateCommand": "bash setup.sh",
-  "forwardPorts": [8000],
+  "postCreateCommand": "bash setup.sh new",
+
+  "forwardPorts": [80, 8000],
   "portsAttributes": {
     "8000": {
+      "label": "Dev Website"
+    },
+    "80": {
       "label": "Website"
     }
   },
@@ -69,7 +73,6 @@
         },
 
         // Misc.
-        "jupyter.askForKernelRestart": false,
         "redhat.telemetry.enabled": false
       },
       "extensions": [
@@ -83,16 +86,6 @@
         // Python
         "ms-python.python",
         "ms-python.vscode-pylance",
-
-        // DevTools
-        "ms-kubernetes-tools.vscode-kubernetes-tools",
-        "ms-vscode-remote.remote-containers",
-        "ms-azuretools.vscode-docker",
-
-        // Views
-        "GrapeCity.gc-excelviewer",
-        "qwtel.sqlite-viewer",
-        "mtxr.sqltools",
 
         // Misc.
         "streetsidesoftware.code-spell-checker",
