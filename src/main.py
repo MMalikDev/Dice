@@ -9,8 +9,8 @@ from lib.utilities import debug, load_variable, logger
 # ---------------------------------------------------------------------- #
 def log_results(
     odds: int, combo: int, tampered: int, random: int, plays: List[List[int]]
-) -> int:
-    DELIMITER = f"\n{'-'*50}\n"
+) -> None:
+    DELIMITER = f"\n{'-' * 50}\n"
 
     rolls = tampered + random
     logger.info(DELIMITER)
@@ -59,8 +59,8 @@ def main(dies: int, sides: int, random: int, tampered: int, X: bool) -> None:
 
 
 if __name__ == "__main__":
-    tampered, random = load_variable("TAMPERED", "2"), load_variable("RANDOM", "1")
-    dies, sides = load_variable("DIES", "7"), load_variable("SIDES", "50")
+    tampered, random = load_variable("TAMPERED", "1"), load_variable("RANDOM", "3")
+    dies, sides = load_variable("DIES", "7"), load_variable("SIDES", "52")
     X = load_variable("X", "0") in ["TRUE", "True", "1"]
 
     main(int(dies), int(sides), int(random), int(tampered), bool(X))

@@ -70,7 +70,9 @@ def get_mode(df: pd.DataFrame) -> int:
 # ---------------------------------------------------------------------- #
 # Main Function
 # ---------------------------------------------------------------------- #
-def get_stats(dies: int, sides: int, nums: int, path: str, X: bool) -> Tuple[int, int]:
+def get_stats(
+    dies: int, sides: int, nums: int, path: str, X: bool
+) -> Tuple[int, List[int], int, float]:
     past = path + "past.csv"
     draws = path + "draws.csv"
     possible = path + "possible.csv"
@@ -119,7 +121,6 @@ def get_stats(dies: int, sides: int, nums: int, path: str, X: bool) -> Tuple[int
     # Get past result data
     df_past = pd.read_csv(past)
     df_possible = pd.read_csv(possible)
-    show_graph(df_possible, df_past, "Winners")
 
     # Get Statistic
     mode = get_mode(df_possible)
@@ -129,6 +130,7 @@ def get_stats(dies: int, sides: int, nums: int, path: str, X: bool) -> Tuple[int
     if X:
         df_extra = pd.read_csv(past_extra)
         df_bonus = pd.read_csv(past_bonus)
+        show_graph(df_possible, df_past, "Winners")
         show_graph(df_possible, df_extra, "Extra")
         show_graph(df_possible, df_bonus, "Bonus")
 
